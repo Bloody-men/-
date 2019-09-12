@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>微信官网模板(投票后页面)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			max-width: 528px;
+			margin: 0 auto;
+			padding: 20px 16px 12px;	
+		}
+		i,em {
+			font-style:normal;
+			font-weight:normal;
+		}
+		a{text-decoration:none;}
+		li{list-style: none;}
+		.header>h2{
+			font-size: 22px;
+			font-weight: 400;
+			margin-bottom: 14px;
+		}
+		.time{
+			font-size: 16px;
+		}
+		.time>span{
+			line-height: 32px;
+		}
+		.header>img{
+			width: 100%;
+			margin: 16px auto;
+		}
+
+		.player{
+			border: 1px solid #e6e6e6;
+			border-radius: 3px;
+			background: #fafafa;
+		}
+	
+		.player_a>h3{
+			margin: 25px 14px 5px;
+			font-size: 17px;
+			line-height: normal;
+			font-weight: normal;
+			color: #888;
+		}
+
+.radio-inline span{display:inline-block;height:20px;position:relative;cursor:pointer;float: left;margin-top: 20px;padding-left: 24px;}
+.radio-inline span:before{margin-left:0px;content:'';position:absolute;width:18px;height:18px;border:1px solid #999;box-sizing:border-box;border-radius:50%;left:0;top:6px}
+.radio-inline span:after{margin-left:0px;content:'';position:absolute;width:10px;height:10px;background-color:#09f;box-sizing:border-box;border-radius:50%;left:4px;top:10px;opacity:0}
+.radio-inline input{display:none}
+.radio-inline input:checked~span:before{border-color:#09f;transition:border-color 0.5s ease-in}
+.radio-inline input[type='radio']:checked~span:after{opacity:1;transition:opacity 0.3s ease-in}
+.radio-inline .radiospan{display:inline-block;height:20px;padding-left:24px;position:relative;cursor:pointer;float: left;margin-top: 20px;}
+.radio-inline .radiospan:before{margin-left:0px;content:'';position:absolute;width:18px;height:18px;border:1px solid #999;box-sizing:border-box;border-radius:2px;left:0;top:6px;border-radius: 2px;}
+.radio-inline .radiospan:after{margin-left:0px;content:'';position:absolute;width:10px;height:6px;border:2px solid #fff;border-radius:1px;border-top:none;border-right:none;background:transparent;transform:rotate(-45deg)}
+.radio-inline input{display:none}
+.radio-inline input:checked~.radiospan:before{border-color:#09f;transition:border-color 0.5s ease-in;background: #09f;border-radius: 2px;}
+.radio-inline input[type='checkbox']:checked~.radiospan:after{opacity:1;transition:opacity 0.3s ease-in}
+
+
+.but1{
+	border-bottom: 1px solid #e6e6e6;
+}
+.but1>li{
+	margin-left: 14px;
+    font-size: 12px;
+	border-bottom: 1px solid #e6e6e6;    
+}
+
+.radio-inline{
+    display: block;
+    height: 70px;
+    font-size: 16px;
+    color: #888;
+    padding: 15px 15px 15px 0;
+}
+.name{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+.introduce{
+	font-size: 14px;
+    line-height: 22px;
+    margin-top: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.img_radiospan {
+    display: block;
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 14px;
+}
+.btn{
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #09f;
+}
+.qr{
+	padding: 2%;
+	width: 70%;
+	margin: 30px auto;
+	border:1px solid rgb(189, 226, 252);
+	border-radius:25px;
+}
+.qr>img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+.jdt {
+	width: 65%;
+	position:relative;
+}
+.jdt .jdt_k {
+	display:inline-block;
+	width:100%;
+	height:4px;
+	background:#e6e6e6;
+	margin-top:15px;
+}
+.jdt .jdt_h {
+	display:inline-block;
+	left:0;
+	position:absolute;
+	width:100%;
+	height:4px;
+	margin-top:15px;
+	background:#09f;
+}
+.jdt .jifen {
+	width: 95px;
+    position: absolute;
+    right: -95px;
+    top: 6px;
+    text-align: center;
+    color: #888;
+
+}
+.but2>li{
+	border-bottom:none !important;    
+}
+
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<header>
+		<div class="header">
+			<h2>互动酷评选活动</h2>
+			<div class="time">距离活动结束 ：<span>11 </span>月<span> 22 </span>日<span> 23 </span>时<span> 59 </span>分<span> 0 </span></div>
+			
+			<img src="https://mmbiz.qpic.cn/mmbiz_jpg/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6VzNPBf6ibLzwsTtZ4g44xbAuHmVvBQ8V0lDU8ob8gPyz9dDoUkHyQ7g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+		</div> 
+	</header>
+<!-- 活动规则 -->
+	<main>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/cd1705afbef2906" title="cd1705afbef2906.png" alt="left.png"/><span style="margin: 0px; padding: 0px; ">&nbsp;<span style="margin: 0px; padding: 0px; font-size: 18px;">活动介绍</span></span>&nbsp;<img width="28" src="http://hdk.static.hitoupiao.wang/png/d3a6b1ad6996d5c" title="d3a6b1ad6996d5c.png" alt="right.png"/></strong></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">１、点击底部导航栏<span style="margin: 0px; padding: 0px;"><strong>&quot;报名&quot;</strong></span>参与活动报名，报名时请提交真实姓名和电话号码作为后期领奖凭证，参与活动；</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">２、照片需符合</span><span style="margin: 0px; padding: 0px;">&quot;XXX活动&quot;</span><span style="margin: 0px; padding: 0px;">主题，可自己进行创新，每张照片需附上&quot;参赛宣言&quot;上传活动页面，审核后即可参与活动。</span></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><br/></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;"></span></strong></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/cd1705afbef2906" title="cd1705afbef2906.png" alt="left.png"/><span style="font-size: 18px;"></span></strong><strong><span style="font-size: 18px;">&nbsp;<span style="font-size: 18px; margin: 0px; padding: 0px; ">活动时间</span></span></strong><span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">&nbsp;</span></strong></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/d3a6b1ad6996d5c" title="d3a6b1ad6996d5c.png" alt="right.png"/></span></strong>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <strong style="margin: 0px; padding: 0px;">报名时间：</strong><span style="margin: 0px; padding: 0px;">2018年1月1日 20:00~1月10日 00:00</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <strong style="margin: 0px; padding: 0px;">投票时间：</strong><span style="margin: 0px; padding: 0px;">2018年1月3日 00:00~1月10日 00:00</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><br/></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"></strong></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/cd1705afbef2906" title="cd1705afbef2906.png" alt="left.png"/>&nbsp;<span style=" font-size: 18px;"><strong style="margin: 0px; padding: 0px;">活动规则</strong></span><strong style="margin: 0px; padding: 0px;">&nbsp;</strong></strong><strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/d3a6b1ad6996d5c" title="d3a6b1ad6996d5c.png" alt="right.png"/></strong>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">１、参赛者上传信息，严禁盗用他人照片等信息；</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">２、禁止参赛作品出现任何非法内容、言论不当等行为；</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">３、严禁任何作弊行为，系统发现会自动对票数清空；</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">４、作品设计著作权，肖像权等法律责任由活动参与者自行承担法律责任；</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;">５、以上行为一经发现，主办方有权删除照片并</span><strong style="margin: 0px; padding: 0px;">取消参赛资格。</strong>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><br/></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;"></span></strong></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/cd1705afbef2906" title="cd1705afbef2906.png" alt="left.png"/>&nbsp;<span style="font-size: 18px; "><strong style="margin: 0px; padding: 0px;"><span style="font-size: 18px; margin: 0px; padding: 0px;">奖品说明</span></strong></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">&nbsp;</span></strong></strong><strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/d3a6b1ad6996d5c" title="d3a6b1ad6996d5c.png" alt="right.png"/></strong>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;">第一名：</strong><span style="margin: 0px; padding: 0px;">奖励XXX一个</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;">第二名：</strong><span style="margin: 0px; padding: 0px;">奖励XXX一个</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;">第三名：</strong><span style="margin: 0px; padding: 0px;">奖励XXX一个</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><br/></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;"></span></strong></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal; text-align: center;">
+		    <strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/cd1705afbef2906" title="cd1705afbef2906.png" alt="left.png"/><span style=" font-size: 18px;">&nbsp;<strong style="margin: 0px; padding: 0px;"><span style=" margin: 0px; padding: 0px;">主办单位</span></strong></span><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">&nbsp;</span></strong></strong><strong style="margin: 0px; padding: 0px;"><img width="28" src="http://hdk.static.hitoupiao.wang/png/d3a6b1ad6996d5c" title="d3a6b1ad6996d5c.png" alt="right.png"/></strong>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <strong style="margin: 0px; padding: 0px;">主办方：</strong><span style="margin: 0px; padding: 0px;">XXX有限公司</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <strong style="margin: 0px; padding: 0px;">地&nbsp; &nbsp;址：</strong><span style="margin: 0px; padding: 0px;">北京市朝阳区XXX街XX路X号</span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><br/></span>
+		</p>
+		<p style="margin-top: 0px; margin-bottom: 10px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, Tahoma, Arial, sans-serif; font-size: 14px; white-space: normal;">
+		    <span style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;"><strong style="margin: 0px; padding: 0px;">本活动最终解释权归XXX有限公司所有！</strong></span></span>
+		</p>
+	</main>
+	<!-- 选手 -->
+	<main>
+		<div class="player">
+			<div class="player_a">
+				<h3>1 帅哥组（多选）</h3>
+				<ul class="but1 but2">
+					<li>
+						<label class="radio-inline">
+							<input type="checkbox" name="多选">
+								<span class="radiospan">
+								</span>
+									<div class="img_radiospan">
+											<img style="width: 100%" src="http://mmbiz.qpic.cn/mmbiz_png/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6ur8ibZibia7CVdluotsjA147IPLKJXdcJ6icjibOlVeBksgIqSEicBkSbk5Q/300?wxfrom=101&wx_fmt=png">
+									</div>
+									<p class="name">张三  于文字和图片的水平垂直居中面我就总结一些比较常用的方法</p>
+									<p class="introduce">这里来一段选手介绍  2019年8月1日 - 关于文字和图片的水平垂直居中,在前端界绝对算是一个老生常谈的问题了,尤其是垂直居中,什么千奇百怪的解法都能想的出来。下面我就总结一些比较常用的方法</p>
+						</label>
+						<div class="jdt">
+						    <span class="jdt_k"></span>
+						    <span class="jdt_h"></span>
+						    <span class="jifen"><i>1 </i>票 &nbsp;&nbsp;<em></em>%</span>
+						</div>
+					</li>
+					<li>
+						<label class="radio-inline">
+							<input type="checkbox" name="多选">
+								<span class="radiospan">
+								</span>
+									<div class="img_radiospan">
+											<img style="width: 100%" src="http://mmbiz.qpic.cn/mmbiz_png/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6ur8ibZibia7CVdluotsjA147IPLKJXdcJ6icjibOlVeBksgIqSEicBkSbk5Q/300?wxfrom=101&wx_fmt=png">
+									</div>
+									<p class="name">张三 </p>
+									<p class="introduce">这里来一段选手介绍  2019年8月1日 - 关于文字和图片的水平垂直居中,在前端界绝对算是一个老生常谈的问题了,尤其是垂直居中,什么千奇百怪的解法都能想的出来。下面我就总结一些比较常用的方法</p>
+						</label>
+						<div class="jdt">
+						    <span class="jdt_k"></span>
+						    <span class="jdt_h"></span>
+						    <span class="jifen"><i>1 </i>票 &nbsp;&nbsp;<em></em>%</span>
+						</div>
+					</li>	
+				</ul>
+
+				<h3>美女组（单选）</h3>
+				<ul class="but1 but2">
+					<li>
+						<label class="radio-inline">
+							<input type="radio" name="多选">
+								<span></span>
+									<div class="img_radiospan">
+											<img style="width: 100%" src="http://mmbiz.qpic.cn/mmbiz_png/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6ur8ibZibia7CVdluotsjA147IPLKJXdcJ6icjibOlVeBksgIqSEicBkSbk5Q/300?wxfrom=101&wx_fmt=png">
+									</div>
+									<p class="name">张三  于文字和图片的水平垂直居中面我就总结一些比较常用的方法</p>
+									<p class="introduce">这里来一段选手介绍 </p>
+						</label>
+						<div class="jdt">
+						    <span class="jdt_k"></span>
+						    <span class="jdt_h"></span>
+						    <span class="jifen"><i>2345 </i>票 &nbsp;&nbsp;<em></em>%</span>
+						</div>
+					</li>
+					<li>
+						<label class="radio-inline">
+							<input type="radio" name="多选">
+								<span></span>
+									<div class="img_radiospan">
+											<img style="width: 100%" src="http://mmbiz.qpic.cn/mmbiz_png/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6ur8ibZibia7CVdluotsjA147IPLKJXdcJ6icjibOlVeBksgIqSEicBkSbk5Q/300?wxfrom=101&wx_fmt=png">
+									</div>
+									<p class="name">张三 </p>
+									<p class="introduce">这里来一段选手介绍  2019年8月1日 - 关于文字和图片的水平垂直居中,在前端界绝对算是一个老生常谈的问题了,尤其是垂直居中,什么千奇百怪的解法都能想的出来。下面我就总结一些比较常用的方法</p>
+						</label>
+						<div class="jdt">
+						    <span class="jdt_k"></span>
+						    <span class="jdt_h"></span>
+						    <span class="jifen"><i>1 </i>票 &nbsp;&nbsp;<em></em>%</span>
+						</div>
+					</li>	
+				</ul>
+			</div>
+			<a href="index.html"><div class="btn">返回首页</div></a>	
+		</div>
+	</main>
+	<footer>
+		<div class="qr">
+			<img src="https://mmbiz.qpic.cn/mmbiz_jpg/GJIoEM4rdyPQrLuWXqKWYUkKBjfhxmx6nO2kWRCRGurO6iaJjA2ibl1GXxJqgiczeTEJ6QMdN5hmAry5WmsL0vibbw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+		</div>
+	</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	//最大值
+	var max_num = 2;
+	var num     = 0;
+	var ratio   = 0;
+	$(".jifen").each(function(){
+		num   = parseInt($(this).children("i").text());
+		ratio = (num / max_num) * 100;
+		ratio = ratio > 100 ? 100 :  Math.ceil(ratio);
+		$(this).children("em").text(ratio);
+		$(this).prev().css("width",ratio+"%");
+		console.log(ratio);
+	});
+</script>
+</html>
